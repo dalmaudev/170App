@@ -1,6 +1,6 @@
-import "./App.css";
+import "./LoginPage.css";
 
-function App() {
+function LoginPage() {
   return (
     <>
       <div className="w-full h-screen">
@@ -85,4 +85,4 @@ function App() {
   );
 }
 
-export default App;
+export default LoginPage;
