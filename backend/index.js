@@ -10,6 +10,24 @@ app.use(
   })
 );
 
+//DB
+
+const dbConnect = require("./src/utils/dbConnect.js");
+const db = mongoose.connect(
+  dbConnect(),
+  {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  },
+  (err) => {
+    if (err) {
+      console.log(err);
+    } else {
+      console.log("Successful");
+    }
+  }
+);
+
 const auth = require("./src/routes/auth.js");
 
 app.get("/", (req, res) => {

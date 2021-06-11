@@ -1,3 +1,9 @@
-import User from "../models/user.js";
+const registerController = (req, res) => {
+  return res.status(200).send({ message: "Register Page..." });
+};
 
-console.log(User);
+const loginController = (req, res) => {
+  return res.status(200).send({ message: "Login Page..." });
+};
+
+module.exports = { registerController, loginController };
