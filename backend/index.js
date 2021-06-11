@@ -1,3 +1,6 @@
+const auth = require("./src/routes/auth.js");
+const dbConnect = require("./src/utils/dbConnect.js");
+
 const mongoose = require("mongoose");
 const express = require("express");
 const app = express();
@@ -12,7 +15,6 @@ app.use(
 
 //DB
 
-const dbConnect = require("./src/utils/dbConnect.js");
 const db = mongoose.connect(
   dbConnect(),
   {
@@ -27,8 +29,6 @@ const db = mongoose.connect(
     }
   }
 );
-
-const auth = require("./src/routes/auth.js");
 
 app.get("/", (req, res) => {
   res.send("Status 200, All OK.");
